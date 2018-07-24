@@ -1,0 +1,206 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-image: url("./background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: whitesmoke;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: "h h h" "p b b ";
+  grid-gap: 20px;
+  background: #333333;
+  color: white;
+  height: 800px;
+}
+
+.profile-pic {
+  display: flex;
+  grid-area: p;
+  max-width: 50%;
+  box-shadow:3px 3px #222222;
+  margin-left: 25px;
+  align-items: center;
+  justify-self: center;
+
+}
+
+.brand-statement {
+  display: flex;
+  grid-area: b;
+  margin-right: 100px;
+  font-family: "Montserrat",
+  sans-serif;
+   font-size: 25px;
+   flex-direction: column;
+
+}
+
+.link {
+  background: transparent;
+  border: #025b96 1px solid;
+  font-size: 15px;
+  padding: 10px;
+  margin: 18px 25px;
+  font-family: "Montserrat", sans-serif;
+  color: #025b96;
+  text-decoration: none;
+}
+.link:hover {
+  color: #0083db;
+  border: #0083db 1px solid;
+}
+
+.name {
+  font-family: "Alegreya Sans", sans-serif;
+  font-size: 50px;
+  margin: 6px 0;
+}
+
+hr {
+  border-color: grey;
+  width: 10%;
+}
+
+.subtitle {
+  font-family: "Montserrat", sans-serif;
+  color: grey;
+}
+a {
+  text-decoration: none;
+}
+.sticky {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  margin: 0;
+  padding: 30px 0;
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+}
+
+.portfolio {
+  max-width: 100%;
+}
+
+#portfolio {
+  display: grid;
+  grid-template:
+    "h h"
+    "a b"
+    "c d";
+}
+
+#project1 {
+  grid-area: a;
+  width: 500px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  text-align: center;
+}
+
+#project2 {
+  grid-area: b;
+  width: 500px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  text-align: center;
+}
+
+#project3 {
+  grid-area: c;
+  width: 500px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  margin: 40px 0;
+  text-align: center;
+}
+
+#project4 {
+  grid-area: d;
+  width: 500px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  margin: 40px 0;
+  text-align: center;
+}
+
+.section-title {
+  display: flex;
+  justify-content: center;
+  grid-area: h;
+  padding: 25px 0;
+}
+
+#contact{
+  display: flex;
+  flex-direction: column;
+  background: black;
+  height: 800px;
+  color: white;
+  justify-content: center;
+   align-items: center;
+}
+
+#form{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr)
+
+}
+
+input{
+  margin: 20px;
+  height: 60px;
+  font-size: 20px;
+   font-family: "Montserrat",
+   sans-serif;
+}
+
+textarea{
+   margin: 20px;
+   height: 60px;
+   font-size: 15px;
+    font-family: "Montserrat",
+    sans-serif;
+}
+
+#submit{
+  width: 95px;
+  justify-self: center;
+  height: 50px;
+  background: transparent;
+   color: #025b96;
+   border: 1px solid #025b96;
+}
+
+#submit:hover{
+    color: #0083db;
+    border: #0083db 1px solid;
+}

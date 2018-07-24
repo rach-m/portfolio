@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Rachel Moskowitz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400i|Montserrat" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="name">Rachel Moskowitz</h1>
+    <hr>
+    <p class="subtitle">Fullstack Web Developer</p>
+    <div id="header">
+      <a href="#portfolio" class= "link">PORTFOLIO</a>
+      <a href="#grid-container" class="link">ABOUT</a>
+      <a href="#contact" class="link">CONTACT</a>
+    </div>
+  </div>
+  <div id="portfolio">
+    <h1 class="name section-title">PORTFOLIO</h1>
+    <div id = 'project1'>
+     <a href="https://pages.git.generalassemb.ly/rach676/tapestry/">
+      <img class="portfolio" src= 'img/project1.jpg' >
+        <p class="subtitle">Tapestry - A JavaScript based game</p>
+    </a>
+    </div>
+    <div id = 'project2'>
+      <a href="https://hotelmate.herokuapp.com/">
+        <img class="portfolio" src="img/project2.jpg">
+          <p class="subtitle">Hotelmate - A full stack Express CRUD app</p>
+      </a>
+    </div>
+    <div id = 'project3'>
+      <a href="https://hotelmate.herokuapp.com/">
+        <img class="portfolio" src="img/project3.jpg">
+          <p class="subtitle">Anywhere But Here - A team project using React and Express</p>
+      </a>
+    </div>
+    <div id = 'project4'>
+        <a href="https://git.generalassemb.ly/rach676/chefs-choice">
+          <img class="portfolio" src="img/project4.jpg">
+            <p class="subtitle">Chef's Choice - A React Native mobile app using Hasura.io</p>
+        </a>
+    </div>
+  </div>
+  <div class="grid-container" id="grid-container" >
+    <img id = "profile-pic" class="profile-pic" src='https://i.imgur.com/uullhsU.jpg'>
+    <p class="brand-statement">
+      <span class="name"> Hi! I'm Rachel.</span>
+      I am an analog and digital artist with a background in graphic design. My passion for the intersection between
+      composition and web development, helps me to create exciting and interactive designs using the latest technologies.
+      I enjoy solving problems in a logical and structured manner, marrying together clean layouts with dry code. I see myself
+      utilizing my talents in a position where I can work with both designers and developers to create incredible functional
+      designs.
+    </p>
+  </div>
+  <div id = 'contact'>
+      <form  name="contactform" method="post" action="http://moskowitzrachel.com/send_form_email.php/" id = 'form'>
+        <input  type="text" name="first_name" number="50" size="50" placeholder="First Name *">
+        <input  type="text" name="last_name" number="50" size="50" placeholder="Last Name *">
+        <input  type="text" name="email" number="80" size="50" placeholder="Email Address *">
+        <input  type="text" name="telephone" number="30" size="50" placeholder="Phone Number">
+        <textarea name="comments" maxlength="1000" cols="25" rows="6" placeholder="Message *"></textarea>
+        <input id="submit" type="submit" value="Submit">
+      </form>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="javascript/smoothScrolling.js"></script>
+  <script type="text/javascript" src="javascript/stickyHeader.js"></script>
+</body>
+
+</html>
