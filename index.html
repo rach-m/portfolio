@@ -7,13 +7,15 @@
   <title>Rachel Moskowitz</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css"
+integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400i|Montserrat" rel="stylesheet">
 
 </head>
 
 <body>
   <div class="body-container">
-  <div class="container">
+  <div class="container-background">
     <h1 class="name">Rachel Moskowitz</h1>
     <hr>
     <p class="subtitle">Fullstack Web Developer</p>
@@ -23,32 +25,47 @@
       <a href="#contact" class="link">CONTACT</a>
     </div>
   </div>
+
+
   <div id="portfolio">
-    <h1 class="name section-title">PORTFOLIO</h1>
-    <div id = 'project1'>
-     <a href="https://rach-m.github.io/Tapestry/.">
-      <img class="portfolio" src= 'img/project1.jpg' >
-        <p class="subtitle">Tapestry - A JavaScript based game</p>
-    </a>
-    </div>
-    <div id = 'project2'>
-      <a href="https://hotelmate.herokuapp.com/">
-        <img class="portfolio" src="img/project2.jpg">
-          <p class="subtitle">Hotelmate - A full stack Express CRUD app</p>
-      </a>
-    </div>
-    <div id = 'project3'>
-      <a href="http://anywhere-but-here.herokuapp.com/">
-        <img class="portfolio" src="img/project3.jpg">
-          <p class="subtitle">Anywhere But Here - A team project using React and Express</p>
-      </a>
-    </div>
-    <div id = 'project4'>
-        <a href="https://github.com/rach-m/chefs-choice">
-          <img class="portfolio" src="img/project4.jpg">
-            <p class="subtitle">Chef's Choice - A React Native mobile app using Hasura.io</p>
-        </a>
-    </div>
+
+<div class="card" style="width: 20rem;">
+  <img class="card-img-top" src="./img/p1.png" alt="Card image Website Screenshot">
+  <div class="card-body">
+<h5 class="card-title">Tapestry - A JavaScript based game</h5>
+    <p class="card-text">This application is a Vanilla JS memory game. Users must remember a sequence of colors to move to the next level. </p>
+<a target="_blank" href="https://rach-m.github.io/Tapestry/" class="btn btn-primary">Live Site</a>
+  </div>
+</div>
+
+
+<div class="card" style="width: 20rem;">
+  <img class="card-img-top" src="./img/p2.png" alt="Card image Website Screenshot">
+  <div class="card-body">
+<h5 class="card-title">Hotelmate - A full stack Express CRUD app</h5>
+    <p class="card-text">The idea behind this app was a reservation management system for hotels to use in order to keep track guests</p>
+<a target="_blank" href="https://hotelmate.herokuapp.com/" class="btn btn-primary">Live Site</a>
+  </div>
+</div>
+
+<div class="card" style="width: 20rem;">
+  <img class="card-img-top" src="./img/p3.png" alt="Card image Website Screenshot">
+  <div class="card-body">
+    <h5 class="card-title">Twitter Emotions - A Full Stack App using React/Express</h5>
+    <p class="card-text">This project was created to show the emotional state of the world using text analysis of the emotion behind Tweets.</p>
+<a target="_blank" href="http://twitter-emotions.herokuapp.com/" class="btn btn-primary">Live Site</a>
+  </div>
+</div>
+
+<div class="card" style="width: 20rem;">
+  <img class="card-img-top c4" src="./img/p4.jpg" alt="Card image Website Screenshot">
+  <div class="card-body">
+<h5 class="card-title">Chef's Choice - A React Native Mobile App</h5>
+    <p class="card-text">This application uses swipe based decision making to help users choose recipes based on a keyword or chosen ingredient.</p>
+<a target="_blank" href="https://github.com/rach-m/chefs-choice/" class="btn btn-primary">Live Site</a>
+  </div>
+</div>
+
   </div>
   <div class="grid-container" id="grid-container" >
     <img id = "profile-pic" class="profile-pic" src='https://i.imgur.com/uullhsU.jpg'>
@@ -63,16 +80,44 @@
   </div>
   <div id = 'contact'>
   <h1 class="name" id='contact-header'>Let's Be In Touch!</h1>
-      <form  name="contactform" method="post" action="http://moskowitzrachel.com/send_form_email.php/" id = 'form'>
-        <input  type="text" name="first_name" number="50" size="50" placeholder="First Name *">
+      <form name="contactform" method="post" action="http://moskowitzrachel.com/send_form_email.php/" id='form'>
+      <div class="form-group">
+        <label for="first_name">First Name:</label>
+        <input required type="text" class="form-control" id="first_name" name = "first_name" aria-describedby="emailHelp"
+          placeholder="First Name *">
+      </div>
+          <div class="form-group">
+            <label for="last_name">Last Name:</label>
+            <input required type="text" class="form-control" id="last_name" name="last_name" aria-describedby="emailHelp"
+              placeholder="Last Name *">
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address:</label>
+            <input required type="email" class="form-control" id="email" name = "email" aria-describedby="emailHelp"
+              placeholder="Email *">
+            <small id="emailHelp" class="form-text text-muted">I'll never share your email with anyone else.</small>
+          </div>
+      <div class="form-group">
+        <label for="telephone">Phone Number:</label>
+        <input type="number" class="form-control" id="telephone" name = "telephone" placeholder="Phone Number">
+      </div>
+      <div class="form-group">
+        <label for="comments">Message: </label>
+        <input required type="textarea" class="form-control" id="comments" name="comments" placeholder="Message *">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+
+        <!-- <input  type="text" name="first_name" number="50" size="50" placeholder="First Name *">
         <input  type="text" name="last_name" number="50" size="50" placeholder="Last Name *">
         <input  type="text" name="email" number="80" size="50" placeholder="Email Address *">
         <input  type="text" name="telephone" number="30" size="50" placeholder="Phone Number">
         <textarea name="comments" maxlength="1000" cols="25" rows="6" placeholder="Message *"></textarea>
         <input id="submit" type="submit" value="Submit">
-      </form>
+      </form> -->
   </div>
-    <div class="container"></div>
+    <div class="container-background"></div>
     </div>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
